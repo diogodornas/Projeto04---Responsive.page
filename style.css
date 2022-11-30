@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* reset no css que vem embutido */
+
+ul {
+  list-style: none;
+}
+/* este comando retira as marcações padrões da lista desordenada (bullets) */
+
+:root {
+  font-size: 62.5%; /* 10px */
+  /* 10px dos 16px que era o valor do root element*/
+  /* fazer uma regra de 3 para achar um valor exato (ex: 10px)
+     que facilita a conversão durante o desdobramento do código,
+     logo um font-size que seria 40px, viraria 4rem neste caso */
+}
+
+/* REM = Root EM */
+/* :root sempre vai referenciar ao font-size do meu root element,
+   ou seja, do meu HTML, ou seja, do meu navegador*/
+/* 1rem = 16px (unidade de medida já setada no navegador neste caso) */
+/* para evitar de ter que fazer cálculos para todas as medidas, no :root
+   colocar o font-size com a unidade de medida de porcentagem(%) */
+
+body {
+  font-family: 'Epilogue', sans-serif;
+
+  background: #ECE9FD;
+
+  padding: 6.0rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+}
+/* padding 6.0rem em cima, 2.3rem nas laterais, 6.6rem na parte de baixo */
+/* fonte será a Epilogue e caso esta não seja encontrada, passará a ser sans-serif */
+
+main {
+  max-width: 33.0rem;
+  margin: 0 auto;
+}
+/* margin: 0 auto vai fazer com que se alinhe ao meio da tela */
+
+h1 {
+  font-weight: 800;
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+
+  color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+
+main p:first-child {
+  color: #7158EF;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+
+h1 + p {
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+
+  text-decoration: none;
+}
+
+a:hover {
+ font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+} 
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #090039;
+
+  max-width: 25.7rem;
+
+  display: flex;
+  gap: 3.8rem;
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+
+  color: #090039;
+}
+/* Quando a unidade é muito pequena, menos de 4px, pra bordas
+   é preferivel manter ela em uma unidade fixa (neste caso, não 
+   converter para rem, não vai fazer uma diferença visual grande
+   e fica com um layout mais coerente, o layout muda se colocar
+   rem neste caso.*/
+
+@media (min-width: 700px) {
+  /* min-width: a partir da largura minima de 700px(neste caso)
+     ou seja, de 700px pra cima, temos: */
+    
+  body {
+      padding: 8rem;
+    }
+  
+    main {
+      max-width: 1020px;
+      display: flex;
+      gap: 10rem;
+    }
+  
+    main > div {
+      max-width: 484px;
+    }
+  
+    ul li {
+      gap: 5.3rem;
+      max-width: 450px;
+      align-items: center;
+    }
+  }
+/* media queries são estilos customizados para quando tivermos alguma
+   regra a ser aplicada (neste caso min-width: 700px)*/
+
+
+/* PONTO DE ATENÇÃO: 
+   Quando falamos de funcionar em IPHONE, mesmo que o dev tools simule algumas
+   telas, no dispositivo iphone usa o safari como motor para entender o HTML, CSS
+   e tudo mais, então é comum estar fazendo pelo computador e quando abrir no 
+   iphone ou o seu cliente, e aparecer algo não funcional, diferente do planejado.
+   Vou precisar de um Iphone para testar para o meu cliente?
+   Provavelmente sim, ou um dispositivo mac que simula iphone através do xcode, com
+   a finalidade de corrigir problemas de responsividade.*/
