@@ -1,4 +1,4 @@
-# Form
+# Responsividade
 
 > Estudo de Responsividade realizado durante o curso da Escola Rocketseat <br>
 > Trilha - Explorer
