@@ -1,6 +1,6 @@
 # Form
 
-> Estudo de Responsividade realizado durante o curso da Escola Rocketseat
+> Estudo de Responsividade realizado durante o curso da Escola Rocketseat <br>
 > Trilha - Explorer
 
 ![preview](./images/picforREADME.png)
